@@ -1,10 +1,18 @@
+@import 'core/mixins';
+@import 'core/variables';
+
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/typography';
 
-@import 'core/mixins';
-@import 'core/variables';
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.wrapper {
+    margin: 0 35px;
+}
 
 //HOME
 @import 'layout/header';
