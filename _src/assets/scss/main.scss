@@ -1,6 +1,21 @@
-@import 'core/settings';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/typography';
 
-body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	height: 100vh;
-}
+@import 'core/mixins';
+@import 'core/variables';
+
+
+//HOME
+@import 'layout/header';
+@import 'layout/main-home';
+@import 'layout/footer';
+
+
+//CARD
+@import 'layout/header-card';
+@import 'layout/design';
+@import 'layout/fill';
+@import 'layout/share';
+@import 'layout/preview';
+@import 'layout/footer-card';
