@@ -1,0 +1,6 @@
+@mixin form_label () {
+    font-family: $font-default;
+    color:$color-dark-blue;
+    font-size: 14px;
+    line-height: 20px;
+}

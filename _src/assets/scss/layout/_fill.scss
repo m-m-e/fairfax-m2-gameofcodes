@@ -1,0 +1,63 @@
+.section__fill {
+    margin: 0 20px;
+}
+.fill__container-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fill__title {
+    flex-grow: 1;
+    padding-left: 10px;
+    font-family: $font-default;
+    color: #54585a;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.form_field {
+    display: block;
+    border: 1px solid $color-hospital-green;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.form_title {
+    font-family: $font-default;
+    color:$color-dark-blue;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+::placeholder {
+    color: #c5c5c5;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.form_title-photo {
+    display: block;
+    @include form_label ();
+}
+.form__photo-preview {
+    display: inline-block;
+}
+.form__photo-preview {
+    border: 1px solid red;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+//Temporal, hay que arreglar el enlace del icono
+.fill__container_img-keyboard, .fill__container_img-arrow {
+    border: 1px solid red;
+    height: 20px;
+    width: 20px;
+}
+
+.fill__img-keyboard {
+    color: blue;
+}
