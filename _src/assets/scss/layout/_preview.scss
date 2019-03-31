@@ -3,7 +3,7 @@ body {
 }
 
 .preview {
-    width: 320px;
+    width: 100vw;
     height: 457px;
     background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
 }
@@ -31,8 +31,9 @@ body {
 }
 
 .preview__card {
+    width: 240px;
+    height: 329px;
     padding: 88px 35px 40px 45px;
-    position: relative;
 }
 
 .preview__card--image {
@@ -41,6 +42,7 @@ body {
     background-color: #ffffff;
     padding: 75px 0 54px 0;
     border-radius: 2px;
+    position: relative;
 }
 
 .preview__card--bar {
@@ -87,8 +89,8 @@ body {
     display: flex;
     flex-direction: row;
     position: absolute;
-    bottom: 52px;
-    right: 97px;
+    top: 373px;
+    left: 65px;
 }
 
 .sm {
