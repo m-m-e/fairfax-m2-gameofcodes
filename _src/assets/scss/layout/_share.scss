@@ -43,8 +43,8 @@
 .share__arrow {
   width: 16px;
   height: 18px;
-  background-color: red;
   margin-left: 35px;
+  color: #54585a;
 }
 .share__btn--create {
   width: 199px;
@@ -88,6 +88,8 @@
   width: 181px;
   height: 30px;
   border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  border: none;
   color: white;
   margin-top: 10px;
   font-size: 14px;
