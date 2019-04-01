@@ -21,3 +21,21 @@
     height: 40px;
     margin: 0 0 20px;
 }
+
+@media all and (min-width: 768px) {
+    .main__footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 40px 0 41px;
+    }
+
+    .main__footer-copy {
+        margin: 0;
+    }
+
+    .main__footer-image {
+        margin: 10px 0;
+    }
+}

@@ -1,22 +1,22 @@
-@mixin footer-copy() {
-    font-family: $font-default;
-    font-size: 14px;
-    line-height: 1.43;
-    color: $color-grey;
-}
-
 @mixin home-title() {
     font-family: $font-title-home;
-    font-size: 19.2px;
+    font-size: 19px;
     color: $color-orange;
     text-align: center;
+
+    @media all and (min-width: 768px) {
+        font-size: 24px;
+    }
 }
 
 @mixin home-subtitle() {
     font-family: $font-default;
-    font-size: 12.8px;
+    font-size: 13px;
     color: $color-dark-blue;
     text-align: center;
+    @media all and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 @mixin home-iconLabel() {
@@ -24,6 +24,9 @@
     text-align: center;
     color: $color-dark-grey;
     font-size: 13px;
+    @media all and (min-width:768px) {
+        font-size: 16px;
+    }
 }
 
 @mixin home-button() {
@@ -32,4 +35,11 @@
     font-size: 16px;
     text-transform: uppercase;
     text-align: center;
+}
+
+@mixin footer-copy() {
+    font-family: $font-default;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $color-grey;
 }
