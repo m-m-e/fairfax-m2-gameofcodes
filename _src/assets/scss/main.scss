@@ -14,14 +14,23 @@ body {
     margin: 0 35px;
 }
 
-fieldset {
-    border: 0;
+.home__wrapper  {
+    margin: 0 20px;
 }
 
 @media all and (min-width:768px) {
     .wrapper {
         margin: 0 174px;
     }
+}
+
+fieldset {
+    border: 0;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 //HOME
