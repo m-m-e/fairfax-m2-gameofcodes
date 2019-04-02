@@ -1,19 +1,7 @@
 .share__section {
-  width: 280px;
-  height: 100vh;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-
-@media all and (min-width: 768px) {
-  margin: 0 40px 0;
-  width: 300px;
-.share__btn--wrapper,
-.share__paragraph,
-.share__line {
-  width: 300px;
-}
-}
 }
 .share__card {
   height: 144px;
@@ -25,21 +13,41 @@
 }
 
 .share__line {
-  width: 280px;
   height: 10px;
   border-bottom: solid 1px #d8d8d8;
 }
 .share__btn--wrapper {
-  width: 280px;
   height: 0;
-	position: fixed ;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(50% -50%);
-  background-color: white ;
-  transition: all .5s ;
+  background-color: white;
+  transition: all 0.5s;
   display: none;
   overflow: hidden;
+}
+.share__btn--create {
+  width: 199px;
+  height: 50px;
+  padding-bottom: 0;
+  border-radius: 12px;
+  text-transform: uppercase;
+  background-color: $color-orange;
+  font-size: 18px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50% 50%);
+}
+
+.share__btn--create:active {
+  background-color: #d5d5d5;
 }
 
 .btnMenu-chk {
@@ -48,26 +56,28 @@
 
 .btnMenu-chk:checked ~ .share__btn--wrapper {
   height: 100px;
-  transform: translateY(0) translateX(50%) ;;
+  transform: translateY(0) translateX(50%);
   top: 5%;
   left: -50%;
   transform: translate(50% -50%);
   display: block;
   position: relative;
-  }
-  
-  .btnMenu-chk:checked ~ .btnMenu-lbl {
+  display: flex;
+  justify-content: center;
+}
+
+.btnMenu-chk:checked ~ .btnMenu-lbl {
   transform: rotate(180deg);
-  position: absolute ;
-  top: 3px ;
+  position: absolute;
+  top: 3px;
   right: 0;
-  }
-  .btnMenu-chk:checked ~ .share__line {
-    visibility: hidden;
-  }
+}
+.btnMenu-chk:checked ~ .share__line {
+  visibility: hidden;
+}
 .share__title {
   color: #54585a;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -78,14 +88,14 @@
   color: $color-orange;
 }
 .btnMenu-lbl {
-	width: 20px ;
-	height: 20px ;
-	position: absolute ;
-  top: 3px ;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
   right: 8px;
-	cursor: pointer ;
-	transition: all .2s ;
-  }
+  cursor: pointer;
+  transition: all 0.2s;
+}
 .fa-chevron-down {
   display: flex;
   justify-content: flex-end;
@@ -98,30 +108,6 @@
   margin-left: 35px;
   color: #54585a;
 }
-.share__btn--create {
-  width: 199px;
-  height: 50px;
-  padding-bottom: 0;
-  border-radius: 12px;
-  text-transform: uppercase;
-  background-color: $color-orange;
-  font-size: 18px;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  transform: translate(-50% 50%);
-}
-
-.share__btn--create:active{
-  background-color: #d5d5d5;
-  
-}
 
 .share__info--wrapper {
   display: flex;
@@ -132,12 +118,10 @@
   top: 20%;
 }
 .share__paragraph {
-  width: 280px;
   color: #54585a;
   text-align: center;
   margin-top: 0;
   padding-top: 30px;
-  border-top: solid 1px #d8d8d8;
 }
 .share__link--cards {
   color: $color-orange;
@@ -154,15 +138,15 @@
   color: white;
   margin-top: 10px;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   line-height: 30px;
   font-weight: lighter;
 }
 .fa-twitter {
-    width: 18px;
-    height: 18px;
-    padding-right: 8px;
+  width: 18px;
+  height: 18px;
+  padding-right: 8px;
 }
 .fa-address-card {
   padding-right: 8px;
