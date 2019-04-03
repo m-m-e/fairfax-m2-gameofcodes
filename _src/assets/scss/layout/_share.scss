@@ -3,9 +3,6 @@
 .link {
   text-decoration: none;
 }
-// .share-line1{
-//   display: none;
-// }
 .share__btn--wrapper {
   width: 100%;
   height: 90px;
@@ -60,11 +57,11 @@
   align-items: center;
   padding-bottom: 30px;
   border-bottom: solid 1px #d8d8d8;
+  text-align: center;
   @include share_info_wrapper; 
 
 }
 .share__paragraph {
-  text-align: center;
   margin-top: 0;
   padding-top: 30px;
   margin: 5px;
@@ -96,3 +93,6 @@
 .fa-address-card {
   padding-right: 8px;
 }
+// .share-line1{
+//   display: none;
+// }
