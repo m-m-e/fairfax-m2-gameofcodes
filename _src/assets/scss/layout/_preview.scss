@@ -3,6 +3,12 @@
     background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     display: flex;
     justify-content: center;
+    @media all and (min-width: 768px){
+        border-radius: 6px;
+        height: auto;
+        margin: 20px 40px 20px 0;
+        width: 100%;
+    }
 }
 
 .preview__card {
@@ -10,6 +16,9 @@
     height: 329px;
     margin: 0 15px 0 25px;
     padding: 88px 0 40px 0;
+    @media all and (min-width: 768px){
+        padding: 223px 0 260px 0;
+    }
 }
 
 .preview__card--top {
