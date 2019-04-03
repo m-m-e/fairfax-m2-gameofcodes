@@ -1,36 +1,26 @@
-.share__section {
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-}
-.share__card {
-  height: 144px;
-  position: relative;
-}
+
 
 .link {
   text-decoration: none;
 }
 
 .share__line {
-  height: 10px;
+  height: 1px;
   border-bottom: solid 1px #d8d8d8;
 }
 .share__btn--wrapper {
-  height: 0;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(50% -50%);
-  background-color: white;
+  width: 100%;
+  height: 90px;
+  padding: 10px 0;
   transition: all 0.5s;
-  display: none;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .share__btn--create {
   width: 199px;
   height: 50px;
-  padding-bottom: 0;
   border-radius: 12px;
   text-transform: uppercase;
   background-color: $color-orange;
@@ -41,40 +31,13 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   border: none;
   cursor: pointer;
-  position: absolute;
-  top: 20%;
-  transform: translate(-50% 50%);
+  
 }
 
 .share__btn--create:active {
   background-color: #d5d5d5;
 }
 
-.btnMenu-chk {
-  display: none;
-}
-
-.btnMenu-chk:checked ~ .share__btn--wrapper {
-  height: 100px;
-  transform: translateY(0) translateX(50%);
-  top: 5%;
-  left: -50%;
-  transform: translate(50% -50%);
-  display: block;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.btnMenu-chk:checked ~ .btnMenu-lbl {
-  transform: rotate(180deg);
-  position: absolute;
-  top: 3px;
-  right: 0;
-}
-.btnMenu-chk:checked ~ .share__line {
-  visibility: hidden;
-}
 .share__title {
   color: #54585a;
   font-family: "Open Sans", sans-serif;
@@ -87,21 +50,18 @@
   margin-right: 10px;
   color: $color-orange;
 }
-.btnMenu-lbl {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 3px;
-  right: 8px;
+.share__card {
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
   transition: all 0.2s;
 }
-.fa-chevron-down {
+.arrow-wrapper {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   color: #54585a;
+  z-index: 99999; 
 }
-
 .share__arrow {
   width: 16px;
   height: 18px;
@@ -116,17 +76,18 @@
   padding-bottom: 30px;
   border-bottom: solid 1px #d8d8d8;
   top: 20%;
+  
 }
 .share__paragraph {
   color: #54585a;
   text-align: center;
   margin-top: 0;
   padding-top: 30px;
+  margin: 5px;
 }
 .share__link--cards {
   color: $color-orange;
   font-size: 11px;
-  margin-top: 5px;
 }
 .share__btn--twitter {
   background-color: #00a0f5;
