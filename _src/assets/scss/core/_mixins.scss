@@ -63,3 +63,15 @@
     line-height: 20px;
     padding-left: 10px;
 }
+@mixin form_desing_title (){
+    font-family: $font-default;
+    font-size: 18px;
+    color: $color-dark-grey;
+}
+@mixin form_design_subtitle {
+    font-family: $font-default;
+    font-size: 14px;
+    color: $color-dark-grey;
+    
+}
+

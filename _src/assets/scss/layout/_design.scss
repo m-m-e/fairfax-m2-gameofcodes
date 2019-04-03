@@ -5,6 +5,7 @@
 .theme__color {
   width: 30px;
   height: 25px;
+  
 }
 .design__form {
   display: flex;
@@ -40,7 +41,7 @@
   margin-top: 0;
   margin-left: 5px;
   margin-bottom: 0;
-  font-size: 18px;
+  @include form_desing_title
 }
 
 .design__icon {
@@ -50,7 +51,8 @@
 
 .design__subtitle {
   margin-top: 0;
-  font-size: 14px;
+ @include form_design_subtitle; 
+  
 }
 
 .design__container__form {
@@ -61,4 +63,8 @@
 
 .design {
   font-family: $font-default;
+}
+
+.fa-chevron-up {
+  color: $color-dark-grey;
 }
