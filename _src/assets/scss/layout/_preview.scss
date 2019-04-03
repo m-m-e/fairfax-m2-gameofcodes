@@ -1,12 +1,15 @@
 .preview {
     height: 457px;
     background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    display: flex;
+    justify-content: center;
 }
 
 .preview__card {
     width: 240px;
     height: 329px;
-    padding: 88px 35px 40px 45px;
+    margin: 0 15px 0 25px;
+    padding: 88px 0 40px 0;
 }
 
 .preview__card--top {
