@@ -3,31 +3,43 @@ body {
 }
 
 .preview {
-    width: 100vw;
-    height: 457px;
+    // width: 100vw;
+    // height: 457px;
     background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
 }
 
 .preview__card {
-    width: 240px;
-    height: 329px;
+    width: 320px;
+    height: 457px;
     padding: 88px 35px 40px 45px;
 }
 
-.preview__card--reference {
-    width: 240px;
-    height: 329px;
-    position: relative;
-}
+// .preview__card--reference {
+//     width: 240px;
+//     height: 329px;
+//     position: relative;
+// }
 
 .preview__card--image {
-    width: 240px;
+    
     height: 200px;
     background-color: #ffffff;
-    padding: 75px 0 54px 0;
-    border-radius: 2px;
+    
+    
+    background-image: url(/assets/images/gameofcodes.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+.card {
+    width: 240px;
+    height: 329px;
+}
+
+.preview__card--list {
+margin-top: 10px;
+}
 .preview__reset {
     width: 75px;
     height: 30px;
@@ -59,9 +71,7 @@ body {
 }
 
 .preview__card--text {
-    position: absolute;
-    top: 21px;
-    left: 20px;
+    background: white;
 }
 
 .preview--h2 {
@@ -70,8 +80,10 @@ body {
     font-family: $font-card;
     font-weight: 700;
     font-size: 18px;
-    margin: 0;
-    padding: 0 0 4px 0;
+    padding-top: 21px;
+    padding-left: 20px;
+    padding-right: 14px;
+    
 }
 
 .preview--h3 {
@@ -79,7 +91,10 @@ body {
     font-family: $font-card;
     font-weight: 400;
     font-size: 16px;
-    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 14px;
+    margin-bottom: 0;
 }
 
 .preview--h3:first-letter {
@@ -88,13 +103,11 @@ body {
 
 .preview__card--sm {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-top: 0;
+    
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 12px;
-    left: 20px;
+    
+    background: #ffffff;
 }
 
 .sm {
