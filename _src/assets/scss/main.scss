@@ -10,16 +10,12 @@ body {
     box-sizing: border-box;
 }
 
-.wrapper {
-    margin: 0 35px;
-}
-
-fieldset {
-    border: 0;
+.home__wrapper  {
+    margin: 0 20px;
 }
 
 @media all and (min-width:768px) {
-    .wrapper {
+    .home__wrapper {
         margin: 0 174px;
     }
 }
@@ -29,6 +25,30 @@ fieldset {
 @import 'layout/main-home';
 @import 'layout/footer';
 
+.wrapper {
+    margin: 0 15px;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media all and (min-width: 768px) {
+    .main__card {
+        flex-direction: row;
+        background: $color-light-grey;
+    }
+    .card__section1 {
+        width: 400px;
+        margin: 20px 30px 0 0;
+    }
+}
 
 //CARD
 @import 'layout/header-card';
