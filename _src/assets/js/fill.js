@@ -46,21 +46,18 @@ jobInput.addEventListener('keyup', fillJob);
 //   }
   
 //   inputEmail.addEventListener('keyup', writeEmail);
+
+
 //-------------------------MAIL
 const inputEmail = document.querySelector('#email');
 const emailIcon = document.querySelector('.mail');
 const value = inputEmail.value;
 
 function addEmail() {
-    
-    // if (value === '') {
-    //     emailIcon.classList.add('hidden');
-    // } else {
         emailIcon.classList.remove('hidden');
         emailIcon.href = `mailto:${value}`;
     }
-
-
+    
 inputEmail.addEventListener('keyup', addEmail);
 
 
