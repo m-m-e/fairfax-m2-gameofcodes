@@ -85,7 +85,6 @@
 .form__container-github {
     margin-bottom: 30px;
 }
-
-hr {
-    margin: 0;
+.line {
+    @include dividing-line;
 }
