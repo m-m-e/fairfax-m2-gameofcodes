@@ -117,7 +117,7 @@
     top: 10px;
     left: 20px;
 }
-
+//circulo
 .sm {
     width: 32px;
     height: 32px;
@@ -129,7 +129,7 @@
     justify-content: center;
     align-items: center;
 }
-
+//icono
 .sm-link {
     text-decoration: none;
     color: $color-dark-blue;
@@ -143,4 +143,60 @@
 
 .access {
     position: absolute;
+}
+
+//nuevas clases para JS palette
+
+.preview-red {
+    .preview--h2 {
+        color: #420101;
+    }
+    .preview--h3 {
+        color: #bd1010;
+    }
+    .preview__card--bar {
+        background: #e95626;
+    }
+    .sm {
+        border: 2px solid #e95626;
+    }
+    .sm-link {
+        color: #420101;
+    }
+}
+
+.preview-grey {
+    .preview--h2 {
+        color: #3e5b65;
+    }
+    .preview--h3 {
+        color: #dfe5eb;
+    }
+    .preview__card--bar {
+        background: #a0c0cf;
+    }
+    .sm {
+        border: 2px solid #a0c0cf;
+    }
+    .sm-link {
+        color: #3e5b65;
+    }
+}
+
+.preview-default {
+    .preview--h2 {
+        color: $color-dark-blue;
+    }
+    .preview--h3 {
+        color: $color-dark-grey;
+    }
+    .preview__card--bar {
+        background: $color-hospital-green;
+    }
+    .sm {
+        border: 2px solid $color-hospital-green;
+    }
+    .sm-link {
+        color: $color-dark-blue;
+    }
 }
