@@ -158,9 +158,10 @@
     .preview--h3 {
         color: #bd1010;
     }
-    .preview__card--bar {
-        background: #e95626;
-    }
+    .preview__card--text {
+    border-left: solid 5px #e95626;
+}
+   
     .sm {
         border: 2px solid #e95626;
     }
@@ -176,9 +177,11 @@
     .preview--h3 {
         color: #dfe5eb;
     }
-    .preview__card--bar {
-        background: #a0c0cf;
+
+    .preview__card--text {
+        border-left: solid 5px #a0c0cf;
     }
+   
     .sm {
         border: 2px solid #a0c0cf;
     }
@@ -194,8 +197,8 @@
     .preview--h3 {
         color: $color-dark-grey;
     }
-    .preview__card--bar {
-        background: $color-hospital-green;
+    .preview__card--text {
+        border-left: solid 5px $color-hospital-green;
     }
     .sm {
         border: 2px solid $color-hospital-green;
@@ -206,4 +209,5 @@
 }
 .hidden {
     display: none;
+    
 }

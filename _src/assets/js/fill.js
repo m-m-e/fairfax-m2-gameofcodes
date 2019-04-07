@@ -56,7 +56,7 @@ const value = inputEmail.value;
 function addEmail() {
         emailIcon.classList.remove('hidden');
         emailIcon.href = `mailto:${value}`;
-    }
+    };
     
 inputEmail.addEventListener('keyup', addEmail);
 
