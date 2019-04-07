@@ -3,11 +3,18 @@
     background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     display: flex;
     justify-content: center;
+
     @media all and (min-width: 768px){
         border-radius: 6px;
         height: auto;
-        margin: 20px 40px 20px 0;
+        margin: 20px 0 20px 0;
+        width: 329px;
+    }
+    @media all and (min-width: 1024px) {
+        // width: 585px;
         width: 100%;
+        max-width: 585px;
+        min-width: 585px;
     }
 }
 
@@ -19,25 +26,28 @@
     @media all and (min-width: 768px){
         padding: 223px 0 260px 0;
     }
+    // @media all and (min-width: 1024px){
+    //     margin: 0 40px 0 40px;
+    // }
 }
 
 .preview__card--top {
     width: 240px;
-    height: 75px;
     background: #ffffff;
     position: relative;
-}
-
-.preview__card--bar {
-    width: 5px;
-    height: 42px;
-    background-color: $color-hospital-green;
-    position: absolute;
-    top: 23px;
+    display: flex;
+    align-items: center;
 }
 
 .preview__card--text {
     background: white;
+    border-left: solid 5px $color-hospital-green;
+    padding-right: 25px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .preview--h2 {
@@ -46,10 +56,7 @@
     font-family: $font-card;
     font-weight: 700;
     font-size: 18px;
-    padding-top: 21px;
-    padding-left: 20px;
-    padding-right: 14px;
-    
+    margin: 0 0 0 20px;
 }
 
 .preview--h3 {
@@ -57,10 +64,8 @@
     font-family: $font-card;
     font-weight: 400;
     font-size: 16px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 14px;
-    margin-bottom: 0;
+    padding-top: 4px;
+    margin: 0 0 0 20px;
 }
 
 .preview--h3:first-letter {
@@ -112,12 +117,11 @@
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
     position: absolute;
     top: 10px;
     left: 20px;
 }
-
+//circulo
 .sm {
     width: 32px;
     height: 32px;
@@ -129,7 +133,7 @@
     justify-content: center;
     align-items: center;
 }
-
+//icono
 .sm-link {
     text-decoration: none;
     color: $color-dark-blue;
@@ -143,4 +147,63 @@
 
 .access {
     position: absolute;
+}
+
+//nuevas clases para JS palette
+
+.preview-red {
+    .preview--h2 {
+        color: #420101;
+    }
+    .preview--h3 {
+        color: #bd1010;
+    }
+    .preview__card--bar {
+        background: #e95626;
+    }
+    .sm {
+        border: 2px solid #e95626;
+    }
+    .sm-link {
+        color: #420101;
+    }
+}
+
+.preview-grey {
+    .preview--h2 {
+        color: #3e5b65;
+    }
+    .preview--h3 {
+        color: #dfe5eb;
+    }
+    .preview__card--bar {
+        background: #a0c0cf;
+    }
+    .sm {
+        border: 2px solid #a0c0cf;
+    }
+    .sm-link {
+        color: #3e5b65;
+    }
+}
+
+.preview-default {
+    .preview--h2 {
+        color: $color-dark-blue;
+    }
+    .preview--h3 {
+        color: $color-dark-grey;
+    }
+    .preview__card--bar {
+        background: $color-hospital-green;
+    }
+    .sm {
+        border: 2px solid $color-hospital-green;
+    }
+    .sm-link {
+        color: $color-dark-blue;
+    }
+}
+.hidden {
+    display: none;
 }

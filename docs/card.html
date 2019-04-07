@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat:400,700|Open+Sans:400,600"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+        <title>Game of Codes</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    
+    <body>
+        <header class="card__header">
+            <div class="wrapper card__header">
+                <img class="card__header-image" src="/assets/images/logo-cards.svg" alt="Awesome profile cards logo">
+            </div>
+        </header>
+        <main class="main__card">
+            <div class="wrapper main__card-wrapper">
+                <form action="#" method="post" class="card__section1">
+                    <fieldset class="design">
+                        <legend class="hide">Sección de diseña</legend>
+                        <div class="design__container__title">
+                            <div class="design__container__title1"> <i class="design__icon far fa-object-ungroup"></i>
+
+                                 <h2 class="design__title">DISEÑA</h2>
+
+                            </div>
+                            <div class="design__container__title2"> <i class="fas fa-chevron-up design__img-arrow"></i>
+
+                            </div>
+                        </div>
+                        <div class="design__container__form">
+                             <h3 class="design__subtitle">COLORES</h3>
+
+                            <div>
+                                <div class="design__form design__form-blue">
+                                    <label class="hide" for="blue_palette">blue palette</label>
+                                    <input id="blue_palette" type="radio" name="palette"
+                                    class="radio_btn" />
+                                    <ul class="theme">
+                                        <li class="theme__color" style="background-color: #114e4e"></li>
+                                        <li class="theme__color" style="background-color: #438792"></li>
+                                        <li class="theme__color" style="background-color: #a2deaf"></li>
+                                    </ul>
+                                </div>
+                                <div class="design__form design__form-red">
+                                    <label class="hide" for="red_palette">Red palette</label>
+                                    <input id="red_palette" type="radio" value="red palette"
+                                    name="palette" class="radio_btn" />
+                                    <ul class="theme">
+                                        <li class="theme__color" style="background-color:#420101"></li>
+                                        <li class="theme__color" style="background-color:#bd1010"></li>
+                                        <li class="theme__color" style="background-color:#e95626"></li>
+                                    </ul>
+                                </div>
+                                <div class="design__form design__form-grey">
+                                    <label class="hide" for="grey_palette">grey palette</label>
+                                    <input id="grey_palette" type="radio" value="grey palette"
+                                    name="palette" class="radio_btn" />
+                                    <ul class="theme">
+                                        <li class="theme__color" style="background-color:#3e5b65"></li>
+                                        <li class="theme__color" style="background-color:#dfe5eb"></li>
+                                        <li class="theme__color" style="background-color:#a0c0cf"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="section__fill">
+                        <legend class="hide">Sección de rellena</legend>
+                        <div class="fill__container-title">
+                            <div class="fill__container_img-keyboard"> <i class="far fa-keyboard fill__img-keyboard"></i>
+
+                            </div>
+                             <h2 class="fill__title">Rellena</h2>
+
+                            <div class="fill__container_img-arrow"> <i class="fas fa-chevron-up fill__img-arrow"></i>
+
+                            </div>
+                        </div>
+                        <div class="fill__form">
+                            <div class="form__container-name">
+                                <label class="form_title" for="name">Nombre completo</label>
+                                <input class="form_field" type="text" name="name"
+                                id="name" placeholder="Ej: Sally Jill">
+                            </div>
+                            <div class="form__container-job">
+                                <label class="form_title" for="job">Puesto</label>
+                                <input class="form_field" type="text" name="job" id="job"
+                                placeholder="Ej: Front-end unicorn">
+                            </div>
+                            <div class="form__container-photo">
+                                <label class="form_title-photo" for="photo">Imagen de perfil</label>
+                                <input class="form_field-photo" type="file" name="photo"
+                                id="photo" value="Añadir imagen">
+                                <div class="form__container-btn">
+                                    <button class="form__btn">Añadir imagen</button>
+                                    <div class="form__photo-preview"></div>
+                                </div>
+                            </div>
+                            <div class="form__container-email">
+                                <label class="form_title" for="email">Email</label>
+                                <input class="form_field" type="email" name="email" id="email"
+                                placeholder="Ej: sally-hill@gmail.com">
+                            </div>
+                            <div class="form__container-phone">
+                                <label class="form_title" for="phone">Teléfono</label>
+                                <input class="form_field" type="tel" name="phone" id="phone"
+                                placeholder="Ej: 555-55-55-55">
+                            </div>
+                            <div class="form__container-linkedin">
+                                <label class="form_title" for="linkedin">Linkedin</label>
+                                <input class="form_field" type="text" name="linkedin"
+                                id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
+                            </div>
+                            <div class="form__container-github">
+                                <label class="form_title" for="github">Github</label>
+                                <input class="form_field" type="text" name="github" id="github"
+                                placeholder="Ej: @sally-hill">
+                            </div>
+                        </div>
+                        <hr class="line" />
+                    </fieldset>
+                    <fieldset class="share__section">
+                        <legend class="hide">Sección de compartir</legend>
+                        <div class="share__section">
+                            <div class="share__card">
+                                <p class="share__title"> <i class="share__icon fas fa-share-alt"></i>comparte</p>
+                                <div class="arrow-wrapper"> <i class="fas fa-chevron-down"></i> 
+                                </div>
+                            </div>
+                            <hr class="line share-line1" />
+                            <div class="share__btn--wrapper">
+                                <button type="submit" class="share__btn--create"><i class="far fa-address-card"></i>Crear tarjeta</button>
+                            </div>
+                            <hr class="line share-line2" />
+                        </div>
+                        <div class="share__info--wrapper">
+                            <p class="share__paragraph">La tarjeta ha sido creada:</p> <a class="share__link--cards link" href="">https://awesome-profile-card.com?id=A456DF0001</a>
+
+                            <a
+                            href="" class="share__btn--twitter link"><i class="fab fa-twitter"></i>Compartir en twitter</a>
+                        </div>
+                    </fieldset>
+                </form>
+                <section class="preview">
+                    <div class="preview__card">
+                        <div class="preview__card--top">
+                            <button class="preview__reset">
+                                <p class="preview__trash"><i class="far fa-trash-alt"></i> reset</p>
+                            </button>
+                            <div class="preview__card--text">
+                                 <h2 class="preview--h2">nombre apellido</h2>
+
+                                 <h3 class="preview--h3">front-end developer</h3>
+
+                                <div class="preview__card--bar"></div>
+                            </div>
+                        </div>
+                        <div class="preview__card--image">
+                            <img class="image-access" src="" alt="tu foto">
+                        </div>
+                        <div class="preview__card--bottom">
+                            <ul class="preview__card--sm">
+                                <li class="sm telephone hidden"> <a class="sm-link" href="#"><i class="fas fa-mobile-alt"></i><span class="access">contactar por
+                            teléfono</span></a>
+
+                                </li>
+                                <li class="sm mail hidden"> <a class="sm-link" href="#"><i class="far fa-envelope"></i><span class="access">contactar por
+                            email</span></a>
+
+                                </li>
+                                <li class="sm linkedin hidden"> <a class="sm-link" href="#"><i class="fab fa-linkedin-in"></i><span class="access">contactar por
+                            linkedin</span></a>
+
+                                </li>
+                                <li class="sm github hidden"> <a class="sm-link" href="#"><i class="fab fa-github-alt"></i><span class="access">contactar por
+                            github</span></a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            </section>
+            </div>
+        </main>
+        <footer class="card__footer">
+            <div class="wrapper card__footer-wrapper">
+                <p class="card__footer-copy">Awesome profile-cards &copy;2018</p>
+                <img class="card__footer-image" src="assets/images/logo-adalab-80px.png"
+                alt="Ir al sitio web de Adalab">
+            </div>
+        </footer>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </body>
+
+</html>
