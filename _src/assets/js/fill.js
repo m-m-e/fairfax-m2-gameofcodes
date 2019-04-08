@@ -31,73 +31,64 @@ function fillJob() {
 jobInput.addEventListener('keyup', fillJob);
 
 // iconos
-
-
-
-// function writeEmail(e) {
-//     const email = e.currentTarget;
-//     const value = email.value;
-//     if ( value === '') {
-//         emailIcon.innerHTML = '';
-//     } else {
-//         emailIcon.innerHTML = `<a href="mailto:${value}></a>`;
-//      }
-//     //  console.log(writeEmail);
-//   }
-  
-//   inputEmail.addEventListener('keyup', writeEmail);
-
-
-//-------------------------MAIL
-const inputEmail = document.querySelector('#email');
+// MAIL
 const emailIcon = document.querySelector('.mail');
-const value = inputEmail.value;
+const emailInfo = document.querySelector('#email');
 
-function addEmail() {
+function showMail() {
+    if(emailInfo.value !== '') {
         emailIcon.classList.remove('hidden');
-        emailIcon.href = `mailto:${value}`;
-    };
+       
+    }
+    else {
+        emailIcon.classList.add('hidden');
+    }  
     
-inputEmail.addEventListener('keyup', addEmail);
+};
+emailInfo.addEventListener('keyup', showMail);
 
-
-
-//---------------------TELEFONO
-const inputPhone = document.querySelector('#phone');
+//PHONE
 const phoneIcon = document.querySelector('.telephone');
-const valuePhone = inputPhone.value;
+const phoneInfo = document.querySelector('#phone');
 
-function addPhone() {
-    phoneIcon.classList.remove('hidden');
-    phoneIcon.href = `tel:${valuePhone}`;
-}
+function showPhone() {
+    if(phoneInfo.value !== '') {
+        phoneIcon.classList.remove('hidden');
+    }
+    else {
+        phoneIcon.classList.add('hidden');
+    }  
+    
+};
+phoneInfo.addEventListener('keyup', showPhone);
 
-inputPhone.addEventListener('keyup', addPhone);
-
-
-
-//----------------------LINKEDIN
-const inputLinkedin = document.querySelector('#linkedin');
+//LINKEDIN
 const linkedinIcon = document.querySelector('.linkedin');
-const valuelinkedin = inputLinkedin.value;
+const linkedinInfo = document.querySelector('#linkedin');
 
-function addLinkedin() {
-    linkedinIcon.classList.remove('hidden');
-    linkedinIcon.href = valuePhone;
-}
+function showLinkedin() {
+    if(linkedinInfo.value !== '') {
+        linkedinIcon.classList.remove('hidden');
+    }
+    else {
+        linkedinIcon.classList.add('hidden');
+    }  
+    
+};
+linkedinInfo.addEventListener('keyup', showLinkedin);
 
-inputLinkedin.addEventListener('keyup', addLinkedin);
+//GITHUB
+const githubIcon = document.querySelector('.github');
+const githubInfo = document.querySelector('#github');
 
+function showGithub() {
+    if(githubInfo.value !== '') {
+        githubIcon.classList.remove('hidden');
+    }
+    else {
+        githubIcon.classList.add('hidden');
+    }  
+    
+};
+githubInfo.addEventListener('keyup', showGithub);
 
-
-//_-----------------------GITHUB
-const inputGithub = document.querySelector('#github');
-const GithubIcon = document.querySelector('.github');
-const valueGithub = inputGithub.value;
-
-function addGithub() {
-    GithubIcon.classList.remove('hidden');
-    GithubIcon.href = valuePhone;
-}
-
-inputGithub.addEventListener('keyup', addGithub);
