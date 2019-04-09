@@ -8,14 +8,9 @@
         border-radius: 6px;
         height: auto;
         margin: 20px 0 20px 0;
-        width: 329px;
+        width: 100vw;
     }
-    @media all and (min-width: 1024px) {
-        // width: 585px;
-        width: 100%;
-        max-width: 585px;
-        min-width: 585px;
-    }
+   
 }
 
 .preview__card {
@@ -26,9 +21,6 @@
     @media all and (min-width: 768px){
         padding: 223px 0 260px 0;
     }
-    // @media all and (min-width: 1024px){
-    //     margin: 0 40px 0 40px;
-    // }
 }
 
 .preview__card--top {
