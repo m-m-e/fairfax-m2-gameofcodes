@@ -31,78 +31,100 @@ function fillJob() {
 jobInput.addEventListener('keyup', fillJob);
 
 // iconos
-
-
-
-// function writeEmail(e) {
-//     const email = e.currentTarget;
-//     const value = email.value;
-//     if ( value === '') {
-//         emailIcon.innerHTML = '';
-//     } else {
-//         emailIcon.innerHTML = `<a href="mailto:${value}></a>`;
-//      }
-//     //  console.log(writeEmail);
-//   }
-  
-//   inputEmail.addEventListener('keyup', writeEmail);
-
-
-//-------------------------MAIL
+// MAIL
+const email = document.querySelector('.mail');
 const inputEmail = document.querySelector('#email');
 const emailIcon = document.querySelector('.sm-link-mail');
 const value = inputEmail.value;
 
-const email = document.querySelector('.mail');
-const phone = document.querySelector('.telephone');
-const linkedin = document.querySelector('.linkedin');
-const github = document.querySelector('.github');
-
 function addEmail() {
+    email.classList.remove('hidden');
+    emailIcon.href = `mailto:${value}`;
+};
+
+function showEmail() {
+    if(inputEmail.value !== '') {
         email.classList.remove('hidden');
-        emailIcon.href = `mailto:${value}`;
-    };
+       
+    }
+    else {
+        email.classList.add('hidden');
+    }  
     
+};
 inputEmail.addEventListener('keyup', addEmail);
+inputEmail.addEventListener('keyup', showEmail);
 
+//PHONE
 
-
-//---------------------TELEFONO
+const phone = document.querySelector('.telephone');
 const inputPhone = document.querySelector('#phone');
 const phoneIcon = document.querySelector('.sm-link-telephone');
 const valuePhone = inputPhone.value;
+
 
 function addPhone() {
     phone.classList.remove('hidden');
     phoneIcon.href = `tel:${valuePhone}`;
 }
 
+
+function showPhone() {
+    if(inputPhone.value !== '') {
+        phone.classList.remove('hidden');
+    }
+    else {
+        phone.classList.add('hidden');
+    }  
+    
+};
 inputPhone.addEventListener('keyup', addPhone);
+inputPhone.addEventListener('keyup', showPhone);
 
-
-
-//----------------------LINKEDIN
+//LINKEDIN
+const linkedin = document.querySelector('.linkedin');
 const inputLinkedin = document.querySelector('#linkedin');
 const linkedinIcon = document.querySelector('.sm-link-linkedin');
 const valuelinkedin = inputLinkedin.value;
-
 function addLinkedin() {
     linkedin.classList.remove('hidden');
     linkedinIcon.href = `https://www.linkedin.com/in/${valuelinkedin}`;
-}
+};
 
+function showLinkedin() {
+    if(inputLinkedin.value !== '') {
+        linkedin.classList.remove('hidden');
+    }
+    else {
+        linkedin.classList.add('hidden');
+    }  
+    
+};
 inputLinkedin.addEventListener('keyup', addLinkedin);
 
+inputLinkedin.addEventListener('keyup', showLinkedin);
 
-
-//_-----------------------GITHUB
+//GITHUB
+const github = document.querySelector('.github');
 const inputGithub = document.querySelector('#github');
 const githubIcon = document.querySelector('.sm-link-github');
 const valueGithub = inputGithub.value;
+
 
 function addGithub() {
     github.classList.remove('hidden');
     githubIcon.href = `https://www.github.com/${valueGithub}`;
 }
-
+function showGithub() {
+    if(inputGithub.value !== '') {
+        github.classList.remove('hidden');
+        // document.querySelector('.github-link').href = 'https://github.com/' + githubInfo.value;
+    }
+    else {
+        github.classList.add('hidden');
+    }  
+    
+};
 inputGithub.addEventListener('keyup', addGithub);
+inputGithub.addEventListener('keyup', showGithub);
+
