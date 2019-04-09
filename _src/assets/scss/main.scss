@@ -20,6 +20,11 @@ body {
     }
 }
 
+.home__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 //HOME
 @import 'layout/header';
 @import 'layout/main-home';

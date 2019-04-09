@@ -1,11 +1,13 @@
 .home {
     background: $color-light-grey;
+    flex-grow: 1;
 }
 
 .home__main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .home__title {
