@@ -21,6 +21,7 @@
       "_src/assets/js/design.js",
       "_src/assets/js/fill.js",
       "_src/assets/js/share.js"
+      "_src/assets/js/collapsable.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"

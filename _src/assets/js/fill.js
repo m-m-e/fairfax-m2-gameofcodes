@@ -50,11 +50,16 @@ jobInput.addEventListener('keyup', fillJob);
 
 //-------------------------MAIL
 const inputEmail = document.querySelector('#email');
-const emailIcon = document.querySelector('.mail');
+const emailIcon = document.querySelector('.sm-link-mail');
 const value = inputEmail.value;
 
+const email = document.querySelector('.mail');
+const phone = document.querySelector('.telephone');
+const linkedin = document.querySelector('.linkedin');
+const github = document.querySelector('.github');
+
 function addEmail() {
-        emailIcon.classList.remove('hidden');
+        email.classList.remove('hidden');
         emailIcon.href = `mailto:${value}`;
     };
     
@@ -64,11 +69,11 @@ inputEmail.addEventListener('keyup', addEmail);
 
 //---------------------TELEFONO
 const inputPhone = document.querySelector('#phone');
-const phoneIcon = document.querySelector('.telephone');
+const phoneIcon = document.querySelector('.sm-link-telephone');
 const valuePhone = inputPhone.value;
 
 function addPhone() {
-    phoneIcon.classList.remove('hidden');
+    phone.classList.remove('hidden');
     phoneIcon.href = `tel:${valuePhone}`;
 }
 
@@ -78,12 +83,12 @@ inputPhone.addEventListener('keyup', addPhone);
 
 //----------------------LINKEDIN
 const inputLinkedin = document.querySelector('#linkedin');
-const linkedinIcon = document.querySelector('.linkedin');
+const linkedinIcon = document.querySelector('.sm-link-linkedin');
 const valuelinkedin = inputLinkedin.value;
 
 function addLinkedin() {
-    linkedinIcon.classList.remove('hidden');
-    linkedinIcon.href = valuePhone;
+    linkedin.classList.remove('hidden');
+    linkedinIcon.href = `https://www.linkedin.com/in/${valuelinkedin}`;
 }
 
 inputLinkedin.addEventListener('keyup', addLinkedin);
@@ -92,12 +97,12 @@ inputLinkedin.addEventListener('keyup', addLinkedin);
 
 //_-----------------------GITHUB
 const inputGithub = document.querySelector('#github');
-const GithubIcon = document.querySelector('.github');
+const githubIcon = document.querySelector('.sm-link-github');
 const valueGithub = inputGithub.value;
 
 function addGithub() {
-    GithubIcon.classList.remove('hidden');
-    GithubIcon.href = valuePhone;
+    github.classList.remove('hidden');
+    githubIcon.href = `https://www.github.com/${valueGithub}`;
 }
 
 inputGithub.addEventListener('keyup', addGithub);
