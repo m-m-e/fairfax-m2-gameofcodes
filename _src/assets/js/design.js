@@ -46,3 +46,16 @@ radioBlue.addEventListener('click', function(){changeColors('preview-blue')});
 radioRed.addEventListener('click', function(){changeColors('preview-red')});
 radioGrey.addEventListener('click', function(){changeColors('preview-grey')});
 
+
+const design = document.querySelector('.design__container__form');
+const designTitle = document.querySelector('.design__container__title');
+
+function designDropDown() {
+    if(design.classList.contains('hidden')) {
+        design.classList.remove('hidden')
+    } else {
+    design.classList.add('hidden');
+    }
+}
+
+designTitle.addEventListener('click', designDropDown);
