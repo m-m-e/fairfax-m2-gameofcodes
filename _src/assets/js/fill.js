@@ -84,6 +84,7 @@ const githubInfo = document.querySelector('#github');
 function showGithub() {
     if(githubInfo.value !== '') {
         githubIcon.classList.remove('hidden');
+        // document.querySelector('.github-link').href = 'https://github.com/' + githubInfo.value;
     }
     else {
         githubIcon.classList.add('hidden');
