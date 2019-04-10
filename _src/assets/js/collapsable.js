@@ -26,3 +26,18 @@ function fillDropDown() {
 }
 
 fillTitle.addEventListener('click', fillDropDown);
+
+//SHARE
+const shareTitle = document.querySelector('.share__card');
+const share = document.querySelector('.share__btn--wrapper');
+function shareDropDown() {
+    if(share.classList.contains('hidden')) {
+        share.classList.remove('hidden');
+       
+    } else {
+    share.classList.add('hidden');
+    
+    }
+}
+
+shareTitle.addEventListener('click', shareDropDown);
