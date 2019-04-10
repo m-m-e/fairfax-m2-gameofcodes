@@ -36,10 +36,13 @@ const inputEmail = document.querySelector('#email');
 const emailIcon = document.querySelector('.sm-link-mail');
 const valueEmail = inputEmail.value;
 
+
 function showEmail() {
     if(inputEmail.value !== '') {
         email.classList.remove('hidden');
-        emailIcon.href = 'mailto:' + valueEmail;   
+        emailIcon.href = 'mailto:' + valueEmail; 
+        
+
     }
     else {
         email.classList.add('hidden');

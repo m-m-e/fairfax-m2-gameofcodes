@@ -25,6 +25,7 @@
 
 .share__title {
   @include share_title;
+  margin: 10px 0;
 }
 .share__icon {
   width: 16px;

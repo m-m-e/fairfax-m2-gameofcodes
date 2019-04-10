@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0 25px 0;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
 }
 
 .fill__title {
@@ -88,4 +89,8 @@
 }
 .line {
     @include dividing-line;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
