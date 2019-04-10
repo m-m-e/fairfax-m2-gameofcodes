@@ -25,6 +25,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.home__container2 {
+  background: $color-light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 400px;
+  padding: 30px 0;
+}
 //HOME
 @import "layout/header";
 @import "layout/main-home";
