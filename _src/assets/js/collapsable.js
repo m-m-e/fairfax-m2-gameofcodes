@@ -1,11 +1,12 @@
 // collapsable design
 const design = document.querySelector('.design__container__form');
 const designTitle = document.querySelector('.design__container__title');
-const arrowIcon = document.querySelector('.fill__img-arrow');
+const arrowIcon = document.querySelector('.fill__container_img-arrow');
 function designDropDown() {
     if(design.classList.contains('hidden')) {
-        design.classList.remove('hidden')
+        design.classList.remove('hidden');
         //flecha para arriba
+        // arrowIcon.classList.remove('rotate');
 
     } else {
     design.classList.add('hidden');
@@ -14,6 +15,7 @@ function designDropDown() {
 }
 
 designTitle.addEventListener('click', designDropDown);
+
 
 // collapsable rellena
 
