@@ -108,3 +108,34 @@ function showGithub() {
 
 inputGithub.addEventListener('keyup', showGithub);
 
+//RESET
+const reset = document.querySelector('.preview__reset');
+const field = document.querySelectorAll('.form_field');
+const nameDefault = document.querySelector('.preview--h2');
+const jobDefault = document.querySelector('.preview--h3');
+const imageDefault = document.querySelector('.preview__card--image');
+const iconsDefault = document.querySelectorAll('.sm');
+
+for (const icon of iconsDefault) {
+    icon.classList.add('hidden');
+}
+
+function resetCard (event) {
+    for (const item of field) {
+        item.value = '';
+        console.log(resetCard);
+    }
+        
+            nameDefault.innerHTML = 'nombre y apellidos';
+            // refresh.job = jobDefault.innerHTML;
+            // refresh.icons = iconsDefault.innerHTML;
+            // refresh.image = imageDefault.innerHTML;
+            // console.log(refresh);
+}
+
+
+
+reset.addEventListener('click', resetCard);
+
+
+
