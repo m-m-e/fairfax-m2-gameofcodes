@@ -135,9 +135,11 @@ function resetCard (event) {
     for (const item of field) {
         item.value = '';
     }
+    radioBlue.checked = 'checked';
     hideIcons();  
     fillName();
     fillJob(); 
+    changeColors('preview-blue');
 }
 
 reset.addEventListener('click', resetCard);
