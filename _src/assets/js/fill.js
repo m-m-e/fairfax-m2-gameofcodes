@@ -1,5 +1,15 @@
 'use strict';
 
+const card = {
+    name: 'Nombre Apellido',
+    job: 'Front-end developer',
+    email: '',
+    telephone: '',
+    linkedin: '',
+    github: '',
+    image: 'https://placehold.it/240x200'
+};
+
 //nombre y puesto
 
 const nameInput = document.querySelector('#name');
@@ -9,20 +19,18 @@ const jobInput = document.querySelector('#job');
 const jobPreview = document.querySelector('.preview--h3');
 
 function fillName() {
-
     if (nameInput.value === '') {
-        namePreview.innerHTML = 'Nombre Apellido';
+        namePreview.innerHTML = card.name;
     } else {
         namePreview.innerHTML = nameInput.value;
     }
 }
 
-
 nameInput.addEventListener('keyup', fillName);
 
 function fillJob() {
     if (jobInput.value === '') {
-        jobPreview.innerHTML = 'Front-end developer';
+        jobPreview.innerHTML = card.job;
     } else {
         jobPreview.innerHTML = jobInput.value;
     }
@@ -38,11 +46,10 @@ const valueEmail = inputEmail.value;
 
 
 function showEmail() {
-    if(inputEmail.value !== '') {
+    card.email = inputEmail.value;
+    if(card.email !== '') {
         email.classList.remove('hidden');
         emailIcon.href = 'mailto:' + valueEmail; 
-        
-
     }
     else {
         email.classList.add('hidden');
@@ -59,7 +66,8 @@ const phoneIcon = document.querySelector('.sm-link-telephone');
 const valuePhone = inputPhone.value;
 
 function showPhone() {
-    if(inputPhone.value !== '') {
+    card.telephone = inputPhone.value;
+    if(card.telephone !== '') {
         phone.classList.remove('hidden');
         phoneIcon.href = `tel:${valuePhone}`;
        
@@ -68,6 +76,7 @@ function showPhone() {
         phone.classList.add('hidden');
     }    
 };
+
 inputPhone.addEventListener('keyup', showPhone);
 
 //LINKEDIN
@@ -77,9 +86,10 @@ const linkedinIcon = document.querySelector('.sm-link-linkedin');
 const valuelinkedin = inputLinkedin.value;
 
 function showLinkedin() {
-    if(inputLinkedin.value !== '') {
+    card.linkedin = inputLinkedin.value;
+    if(card.linkedin !== '') {
         linkedin.classList.remove('hidden');
-        document.querySelector('.sm-link-linkedin').href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
+        document.querySelector('.sm-link-linkedin').href = 'https://www.linkedin.com/in/' + card.linkedin;
     }
     else {
         linkedin.classList.add('hidden');
@@ -96,9 +106,10 @@ const githubIcon = document.querySelector('.sm-link-github');
 const valueGithub = inputGithub.value;
 
 function showGithub() {
-    if(inputGithub.value !== '') {
+    card.github = inputGithub.value;
+    if(card.github !== '') {
         github.classList.remove('hidden');
-        document.querySelector('.sm-link-github').href = 'https://github.com/' + inputGithub.value;
+        document.querySelector('.sm-link-github').href = 'https://github.com/' + card.github;
     }
     else {
         github.classList.add('hidden');
@@ -107,4 +118,31 @@ function showGithub() {
 };
 
 inputGithub.addEventListener('keyup', showGithub);
+
+//RESET
+const reset = document.querySelector('.preview__reset');
+const field = document.querySelectorAll('.form_field');
+const imageDefault = document.querySelector('.preview__card--image');
+const iconsDefault = document.querySelectorAll('.sm');
+
+function hideIcons () {
+    for (const icon of iconsDefault) {
+    icon.classList.add('hidden');
+    }
+}
+
+function resetCard (event) {
+    for (const item of field) {
+        item.value = '';
+    }
+    radioBlue.checked = 'checked';
+    hideIcons();  
+    fillName();
+    fillJob(); 
+    changeColors('preview-blue');
+}
+
+reset.addEventListener('click', resetCard);
+
+
 

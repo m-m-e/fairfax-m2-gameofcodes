@@ -203,3 +203,12 @@
     display: none;
     
 }
+
+.js-container-hidden {
+    .js-container-panel{
+        display: none;
+    }
+    .container-arrow{
+        transform: rotate(180deg);
+    }
+}
