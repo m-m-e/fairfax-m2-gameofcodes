@@ -23,6 +23,7 @@ function fillName() {
         namePreview.innerHTML = card.name;
     } else {
         namePreview.innerHTML = nameInput.value;
+        saveData(nameInput.name, nameInput.value);
     }
 }
 
@@ -33,6 +34,7 @@ function fillJob() {
         jobPreview.innerHTML = card.job;
     } else {
         jobPreview.innerHTML = jobInput.value;
+        saveData(jobInput.name, jobInput.value);
     }
 }
 
@@ -49,7 +51,8 @@ function showEmail() {
     card.email = inputEmail.value;
     if(card.email !== '') {
         email.classList.remove('hidden');
-        emailIcon.href = 'mailto:' + valueEmail; 
+        emailIcon.href = 'mailto:' + valueEmail;
+        saveData(inputEmail.name, inputEmail.value);
     }
     else {
         email.classList.add('hidden');
@@ -70,6 +73,7 @@ function showPhone() {
     if(card.telephone !== '') {
         phone.classList.remove('hidden');
         phoneIcon.href = `tel:${valuePhone}`;
+        saveData(inputPhone.name, inputPhone.value);
        
     }
     else {
@@ -89,7 +93,8 @@ function showLinkedin() {
     card.linkedin = inputLinkedin.value;
     if(card.linkedin !== '') {
         linkedin.classList.remove('hidden');
-        document.querySelector('.sm-link-linkedin').href = 'https://www.linkedin.com/in/' + card.linkedin;
+        linkedinIcon.href = 'https://www.linkedin.com/in/' + card.linkedin;
+        saveData(inputLinkedin.name, inputLinkedin.value);
     }
     else {
         linkedin.classList.add('hidden');
@@ -109,7 +114,9 @@ function showGithub() {
     card.github = inputGithub.value;
     if(card.github !== '') {
         github.classList.remove('hidden');
-        document.querySelector('.sm-link-github').href = 'https://github.com/' + card.github;
+        githubIcon.href = 'https://github.com/' + card.github;
+        cardSaved.github = inputGithub.value;
+        saveData(inputGithub.name, inputGithub.value);
     }
     else {
         github.classList.add('hidden');
@@ -144,5 +151,16 @@ function resetCard (event) {
 
 reset.addEventListener('click', resetCard);
 
+//Save data
+const cardSaved = {};
 
+const saveData = (key, val) => {
+    cardSaved[key] = val;
+    return cardSaved;
+}
 
+console.log(cardSaved);
+
+localStorage.setItem('cardSaved', JSON.stringify(cardSaved));
+const savedCard = JSON.parse(localStorage.getItem('cardSaved'));
+console.log(cardSaved);
