@@ -18,13 +18,14 @@
 	"js": {
 		"src": [
       "_src/assets/js/main.js",
+      "_src/assets/js/base64.js",
       "_src/assets/js/design.js",
       "_src/assets/js/fill.js",
       "_src/assets/js/share.js",
       "_src/assets/js/collapsable.js",
       "_src/assets/js/profilePhoto.js",
-      "_src/assets/js/sendCard.js",
-      "_src/assets/js/base64.js"
+      "_src/assets/js/sendCard.js"
+      
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"

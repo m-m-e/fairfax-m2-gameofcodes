@@ -10,6 +10,8 @@ const card = {
     image: 'https://placehold.it/240x200'
 };
 
+//imageDefault.setAttribute('style',`background-image:url(${base64})`);
+
 //nombre y puesto
 
 const nameInput = document.querySelector('#name');
@@ -131,6 +133,10 @@ function hideIcons () {
     }
 }
 
+function backImage () {
+    imageDefault.style = `background-image: url(${base64})`;
+}
+
 function resetCard (event) {
     for (const item of field) {
         item.value = '';
@@ -140,6 +146,7 @@ function resetCard (event) {
     fillName();
     fillJob(); 
     changeColors('preview-blue');
+    backImage();
 }
 
 reset.addEventListener('click', resetCard);
