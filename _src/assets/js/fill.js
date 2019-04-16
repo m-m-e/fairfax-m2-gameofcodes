@@ -126,6 +126,7 @@ const reset = document.querySelector('.preview__reset');
 const field = document.querySelectorAll('.form_field');
 const imageDefault = document.querySelector('.preview__card--image');
 const iconsDefault = document.querySelectorAll('.sm');
+const imgPreviewDefault = document.querySelector('.form__photo-preview');
 
 function hideIcons () {
     for (const icon of iconsDefault) {
@@ -147,6 +148,7 @@ function resetCard (event) {
     fillJob(); 
     changeColors('preview-blue');
     backImage();
+    imgPreviewDefault = ' ';
 }
 
 reset.addEventListener('click', resetCard);
