@@ -36,16 +36,25 @@ const radioGrey = document.querySelector('#grey_palette');
 const previewCard = document.querySelector('.preview__card');
 
 function changeColors(classtoadd) {
-    console.log(classtoadd)
+    console.log(classtoadd);
     previewCard.classList.remove('preview-grey','preview-red', 'preview-blue');
     previewCard.classList.add(classtoadd);
 }
 
+const getPalette = event => {
+    const name = event.currentTarget.name;
+    const value = parseInt(event.currentTarget.value);
+    console.log(name, value);
+    if (value === 1) {
+        changeColors('preview-blue');
+    } else if (value === 2) {
+        changeColors('preview-red');
+    } else {
+        changeColors('preview-grey');
+    }
+    saveData(name, value);
+};
 
-radioBlue.addEventListener('click', function(){changeColors('preview-blue')});
-radioRed.addEventListener('click', function(){changeColors('preview-red')});
-radioGrey.addEventListener('click', function(){changeColors('preview-grey')});
-
-
-
-
+radioBlue.addEventListener('click', getPalette);
+radioRed.addEventListener('click', getPalette);
+radioGrey.addEventListener('click', getPalette);

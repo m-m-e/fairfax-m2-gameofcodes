@@ -1,4 +1,8 @@
 'use strict';
+const nameInput = document.querySelector('#name');
+const namePreview = document.querySelector('.preview--h2');
+const jobInput = document.querySelector('#job');
+const jobPreview = document.querySelector('.preview--h3');
 
 const card = {
     name: 'Nombre Apellido',
@@ -10,13 +14,22 @@ const card = {
     image: 'https://placehold.it/240x200'
 };
 
+//Coger los datos guardados (si hay)
+const savedData = JSON.parse(localStorage.getItem('cardSaved'));
+console.log(savedData);
+
+const useSavedData = (data) => {
+    if (data !== null) {
+        nameInput.value = data.name;
+        namePreview.innerHTML = data.name;
+        console.log(namePreview.innerHTML);
+        console.log(data);
+    }
+};
+
+useSavedData(savedData);
+
 //nombre y puesto
-
-const nameInput = document.querySelector('#name');
-const namePreview = document.querySelector('.preview--h2');
-
-const jobInput = document.querySelector('#job');
-const jobPreview = document.querySelector('.preview--h3');
 
 function fillName() {
     if (nameInput.value === '') {
@@ -156,11 +169,9 @@ const cardSaved = {};
 
 const saveData = (key, val) => {
     cardSaved[key] = val;
+    console.log(cardSaved);
+    localStorage.setItem('cardSaved', JSON.stringify(cardSaved));
     return cardSaved;
 }
 
-console.log(cardSaved);
 
-localStorage.setItem('cardSaved', JSON.stringify(cardSaved));
-const savedCard = JSON.parse(localStorage.getItem('cardSaved'));
-console.log(cardSaved);
