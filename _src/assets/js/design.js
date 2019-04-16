@@ -41,19 +41,28 @@ function changeColors(classtoadd) {
     previewCard.classList.add(classtoadd);
 }
 
+function choosePalette(value){
+    if (value === 1) {
+        changeColors('preview-blue');
+        radioBlue.checked = 'checked';
+    } else if (value === 2) {
+        changeColors('preview-red');
+        radioRed.checked = 'checked';
+    } else {
+        changeColors('preview-grey');
+        radioGrey.checked = 'checked';
+    }
+}
+
 const getPalette = event => {
     const name = event.currentTarget.name;
     const value = parseInt(event.currentTarget.value);
     console.log(name, value);
-    if (value === 1) {
-        changeColors('preview-blue');
-    } else if (value === 2) {
-        changeColors('preview-red');
-    } else {
-        changeColors('preview-grey');
-    }
+    choosePalette(value);
     saveData(name, value);
 };
+
+// function checkRadio(value) {}
 
 radioBlue.addEventListener('click', getPalette);
 radioRed.addEventListener('click', getPalette);

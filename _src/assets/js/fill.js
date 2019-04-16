@@ -4,30 +4,66 @@ const namePreview = document.querySelector('.preview--h2');
 const jobInput = document.querySelector('#job');
 const jobPreview = document.querySelector('.preview--h3');
 
+const email = document.querySelector('.mail');
+const inputEmail = document.querySelector('#email');
+const emailIcon = document.querySelector('.sm-link-mail');
+const valueEmail = inputEmail.value;
+
+const phone = document.querySelector('.telephone');
+const inputPhone = document.querySelector('#phone');
+const phoneIcon = document.querySelector('.sm-link-telephone');
+const valuePhone = inputPhone.value;
+
+const linkedin = document.querySelector('.linkedin');
+const inputLinkedin = document.querySelector('#linkedin');
+const linkedinIcon = document.querySelector('.sm-link-linkedin');
+const valuelinkedin = inputLinkedin.value;
+
+const github = document.querySelector('.github');
+const inputGithub = document.querySelector('#github');
+const githubIcon = document.querySelector('.sm-link-github');
+const valueGithub = inputGithub.value;
+
 const card = {
     name: 'Nombre Apellido',
     job: 'Front-end developer',
     email: '',
-    telephone: '',
+    phone: '',
     linkedin: '',
     github: '',
-    image: 'https://placehold.it/240x200'
+    image: 'https://placehold.it/240x200',
+    palette: 1
 };
 
 //Coger los datos guardados (si hay)
 const savedData = JSON.parse(localStorage.getItem('cardSaved'));
-console.log(savedData);
 
-const useSavedData = (data) => {
-    if (data !== null) {
-        nameInput.value = data.name;
-        namePreview.innerHTML = data.name;
-        console.log(namePreview.innerHTML);
-        console.log(data);
-    }
+//merge savedData con card
+const cardData = {
+    ...card,
+    ...savedData
 };
 
-useSavedData(savedData);
+//imprimir cosas por defecto O guardado
+const setCardData = (data) => {
+    nameInput.value = data.name;
+    namePreview.innerHTML = data.name;
+    jobInput.value = data.job;
+    jobPreview.innerHTML = data.job;
+    inputEmail.value = data.email;
+    showEmail();
+    inputPhone.value = data.phone;
+    showPhone();
+    inputLinkedin.value = data.linkedin;
+    showLinkedin();
+    inputGithub.value = data.github;
+    showGithub();
+    choosePalette(cardData.palette);
+
+    console.log(data);
+};
+
+setCardData(cardData);
 
 //nombre y puesto
 
@@ -54,15 +90,10 @@ function fillJob() {
 jobInput.addEventListener('keyup', fillJob);
 // iconos
 // MAIL
-const email = document.querySelector('.mail');
-const inputEmail = document.querySelector('#email');
-const emailIcon = document.querySelector('.sm-link-mail');
-const valueEmail = inputEmail.value;
-
 
 function showEmail() {
-    card.email = inputEmail.value;
-    if(card.email !== '') {
+    cardData.email = inputEmail.value;
+    if(cardData.email !== '') {
         email.classList.remove('hidden');
         emailIcon.href = 'mailto:' + valueEmail;
         saveData(inputEmail.name, inputEmail.value);
@@ -76,14 +107,9 @@ inputEmail.addEventListener('keyup', showEmail);
 
 //PHONE
 
-const phone = document.querySelector('.telephone');
-const inputPhone = document.querySelector('#phone');
-const phoneIcon = document.querySelector('.sm-link-telephone');
-const valuePhone = inputPhone.value;
-
 function showPhone() {
-    card.telephone = inputPhone.value;
-    if(card.telephone !== '') {
+    cardData.phone = inputPhone.value;
+    if(cardData.phone !== '') {
         phone.classList.remove('hidden');
         phoneIcon.href = `tel:${valuePhone}`;
         saveData(inputPhone.name, inputPhone.value);
@@ -97,16 +123,12 @@ function showPhone() {
 inputPhone.addEventListener('keyup', showPhone);
 
 //LINKEDIN
-const linkedin = document.querySelector('.linkedin');
-const inputLinkedin = document.querySelector('#linkedin');
-const linkedinIcon = document.querySelector('.sm-link-linkedin');
-const valuelinkedin = inputLinkedin.value;
 
 function showLinkedin() {
-    card.linkedin = inputLinkedin.value;
-    if(card.linkedin !== '') {
+    cardData.linkedin = inputLinkedin.value;
+    if(cardData.linkedin !== '') {
         linkedin.classList.remove('hidden');
-        linkedinIcon.href = 'https://www.linkedin.com/in/' + card.linkedin;
+        linkedinIcon.href = 'https://www.linkedin.com/in/' + cardData.linkedin;
         saveData(inputLinkedin.name, inputLinkedin.value);
     }
     else {
@@ -118,17 +140,12 @@ function showLinkedin() {
 inputLinkedin.addEventListener('keyup', showLinkedin);
 
 //GITHUB
-const github = document.querySelector('.github');
-const inputGithub = document.querySelector('#github');
-const githubIcon = document.querySelector('.sm-link-github');
-const valueGithub = inputGithub.value;
 
 function showGithub() {
-    card.github = inputGithub.value;
-    if(card.github !== '') {
+    cardData.github = inputGithub.value;
+    if(cardData.github !== '') {
         github.classList.remove('hidden');
-        githubIcon.href = 'https://github.com/' + card.github;
-        cardSaved.github = inputGithub.value;
+        githubIcon.href = 'https://github.com/' + cardData.github;
         saveData(inputGithub.name, inputGithub.value);
     }
     else {
@@ -165,13 +182,12 @@ function resetCard (event) {
 reset.addEventListener('click', resetCard);
 
 //Save data
-const cardSaved = {};
 
-const saveData = (key, val) => {
-    cardSaved[key] = val;
-    console.log(cardSaved);
-    localStorage.setItem('cardSaved', JSON.stringify(cardSaved));
-    return cardSaved;
+function saveData(key, val) {
+    cardData[key] = val;
+    console.log(cardData);
+    localStorage.setItem('cardSaved', JSON.stringify(cardData));
+    return cardData;
 }
 
 
