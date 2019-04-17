@@ -34,9 +34,11 @@ const card = {
     photo: 'https://placehold.it/240x200',
     palette: 1
 };
+//imageDefault.setAttribute('style',`background-image:url(${base64})`);
 
 //Coger los datos guardados (si hay)
 const savedData = JSON.parse(localStorage.getItem('cardSaved'));
+
 
 //merge savedData con card
 const cardData = {
@@ -170,11 +172,16 @@ const reset = document.querySelector('.preview__reset');
 const field = document.querySelectorAll('.form_field');
 const imageDefault = document.querySelector('.preview__card--image');
 const iconsDefault = document.querySelectorAll('.sm');
+const imgPreviewDefault = document.querySelector('.form__photo-preview');
 
 function hideIcons () {
     for (const icon of iconsDefault) {
     icon.classList.add('hidden');
     }
+}
+
+function backImage () {
+    imageDefault.style = `background-image: url(${base64})`;
 }
 
 function resetCard (event) {
@@ -188,6 +195,8 @@ function resetCard (event) {
     fillName();
     fillJob(); 
     changeColors('preview-blue');
+    backImage();
+    profilePreview.style.backgroundImage = '';
 }
 
 reset.addEventListener('click', resetCard);
