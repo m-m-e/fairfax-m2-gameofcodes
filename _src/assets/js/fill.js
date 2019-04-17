@@ -31,7 +31,7 @@ const card = {
     phone: '',
     linkedin: '',
     github: '',
-    image: 'https://placehold.it/240x200',
+    photo: 'https://placehold.it/240x200',
     palette: 1
 };
 
@@ -46,10 +46,21 @@ const cardData = {
 
 //imprimir cosas por defecto O guardado
 const setCardData = (data) => {
-    nameInput.value = data.name;
-    namePreview.innerHTML = data.name;
-    jobInput.value = data.job;
-    jobPreview.innerHTML = data.job;
+    if (data.name === 'Nombre Apellido') {
+        namePreview.innerHTML = data.name;
+    } else {
+        nameInput.value = data.name;
+        namePreview.innerHTML = data.name;
+    }
+    fillName();
+    
+    if (data.job === 'Front-end developer') {
+        jobPreview.innerHTML = data.job;        
+    } else {
+        jobInput.value = data.job;
+        jobPreview.innerHTML = data.job;
+    }
+    fillJob();
     inputEmail.value = data.email;
     showEmail();
     inputPhone.value = data.phone;
