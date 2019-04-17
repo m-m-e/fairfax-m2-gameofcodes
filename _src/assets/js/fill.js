@@ -148,7 +148,7 @@ function resetCard (event) {
     fillJob(); 
     changeColors('preview-blue');
     backImage();
-    imgPreviewDefault = ' ';
+    profilePreview.style.backgroundImage = '';
 }
 
 reset.addEventListener('click', resetCard);
