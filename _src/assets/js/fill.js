@@ -83,8 +83,9 @@ function fillName() {
         namePreview.innerHTML = card.name;
     } else {
         namePreview.innerHTML = nameInput.value;
-        saveData(nameInput.name, nameInput.value);
     }
+    saveData(nameInput.name, nameInput.value);
+
 }
 
 nameInput.addEventListener('keyup', fillName);
@@ -94,8 +95,8 @@ function fillJob() {
         jobPreview.innerHTML = card.job;
     } else {
         jobPreview.innerHTML = jobInput.value;
-        saveData(jobInput.name, jobInput.value);
     }
+    saveData(jobInput.name, jobInput.value);
 }
 
 jobInput.addEventListener('keyup', fillJob);
@@ -107,11 +108,11 @@ function showEmail() {
     if(cardData.email !== '') {
         email.classList.remove('hidden');
         emailIcon.href = 'mailto:' + valueEmail;
-        saveData(inputEmail.name, inputEmail.value);
     }
     else {
         email.classList.add('hidden');
     }   
+    saveData(inputEmail.name, inputEmail.value);
 };
 
 inputEmail.addEventListener('keyup', showEmail);
@@ -123,12 +124,11 @@ function showPhone() {
     if(cardData.phone !== '') {
         phone.classList.remove('hidden');
         phoneIcon.href = `tel:${valuePhone}`;
-        saveData(inputPhone.name, inputPhone.value);
-       
     }
     else {
         phone.classList.add('hidden');
     }    
+    saveData(inputPhone.name, inputPhone.value);
 };
 
 inputPhone.addEventListener('keyup', showPhone);
@@ -140,12 +140,11 @@ function showLinkedin() {
     if(cardData.linkedin !== '') {
         linkedin.classList.remove('hidden');
         linkedinIcon.href = 'https://www.linkedin.com/in/' + cardData.linkedin;
-        saveData(inputLinkedin.name, inputLinkedin.value);
     }
     else {
         linkedin.classList.add('hidden');
     }  
-    
+    saveData(inputLinkedin.name, inputLinkedin.value);    
 };
 
 inputLinkedin.addEventListener('keyup', showLinkedin);
@@ -157,12 +156,11 @@ function showGithub() {
     if(cardData.github !== '') {
         github.classList.remove('hidden');
         githubIcon.href = 'https://github.com/' + cardData.github;
-        saveData(inputGithub.name, inputGithub.value);
     }
     else {
         github.classList.add('hidden');
     }  
-    
+    saveData(inputGithub.name, inputGithub.value);
 };
 
 inputGithub.addEventListener('keyup', showGithub);
@@ -182,8 +180,10 @@ function hideIcons () {
 function resetCard (event) {
     for (const item of field) {
         item.value = '';
+        saveData(item.name, item.value);
     }
-    radioBlue.checked = 'checked';
+    choosePalette(card.palette);
+    cardData.palette = '1';
     hideIcons();  
     fillName();
     fillJob(); 
