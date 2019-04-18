@@ -21,6 +21,6 @@ fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
 })
 .then(response => response.json())
 .then(data => {
-    const urlGenerada = data.cardURL;
-    console.log(urlGenerada);
+    const urlGenerated = data.cardURL;
+    console.log(urlGenerated);
 })
