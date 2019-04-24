@@ -14,7 +14,6 @@ const nuestroObjeto = {
 
 function sendHandler() {
     console.log('holi'); 
-
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
         method: 'POST',
         headers: {

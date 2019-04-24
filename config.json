@@ -18,7 +18,7 @@
 	"js": {
 		"src": [
       "_src/assets/js/main.js",
-      "_src/assets/js/base64.js",
+      "_src/assets/js/basesixtyfour.js",
       "_src/assets/js/design.js",
       "_src/assets/js/fill.js",
       "_src/assets/js/share.js",
