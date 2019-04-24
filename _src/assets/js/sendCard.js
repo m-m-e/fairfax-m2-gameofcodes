@@ -12,14 +12,14 @@ const nuestroObjeto = {
 }
 
 
-fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/', {
-    method: 'POST',
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({nuestroObjeto}),
-})
-.then(response => response.json())
-.then(data => {
-    console.log(data.cardURL);
-})
+// fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/', {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({nuestroObjeto}),
+// })
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data.cardURL);
+// })
