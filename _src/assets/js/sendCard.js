@@ -13,6 +13,7 @@ function sendHandler(event) {
         },
         body: JSON.stringify(cardData),
     })
+    
     .then(response => response.json())
     .then(data => {
         const urlGenerated = data.cardURL;
@@ -20,7 +21,9 @@ function sendHandler(event) {
         cardUrl.href = urlGenerated;
         shareTwitter.classList.remove('hidden');
         createTweet(urlGenerated);
+        
     })
+    console.log(cardData);
 }
 
 
