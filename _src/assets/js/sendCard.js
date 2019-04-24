@@ -2,6 +2,7 @@
 
 const btnShare = document.querySelector('.share__btn--create');
 const cardUrl = document.querySelector('.share__link--cards');
+const shareTwitter = document.querySelector('.share__info--wrapper');
 
 function sendHandler(event) {
     console.log('holi'); 
@@ -19,6 +20,7 @@ function sendHandler(event) {
         cardUrl.innerHTML = urlGenerated;
         cardUrl.href = urlGenerated;
         console.log(urlGenerated);
+        shareTwitter.classList.remove('hidden');
     })
 }
 
