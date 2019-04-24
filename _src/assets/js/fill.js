@@ -79,6 +79,7 @@ const setCardData = (data) => {
     showGithub();
     choosePalette(cardData.palette);
     imageDefault.style = `background-image: url(${cardData.photo})`;
+    imgPreviewDefault.style = `background-image: url(${cardData.photo})`;
     console.log(data);
 };
 
