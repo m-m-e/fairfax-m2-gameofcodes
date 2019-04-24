@@ -5,7 +5,6 @@ const cardUrl = document.querySelector('.share__link--cards');
 const shareTwitter = document.querySelector('.share__info--wrapper');
 
 function sendHandler(event) {
-    console.log('holi'); 
     event.preventDefault();
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
         method: 'POST',
@@ -19,7 +18,6 @@ function sendHandler(event) {
         const urlGenerated = data.cardURL;
         cardUrl.innerHTML = urlGenerated;
         cardUrl.href = urlGenerated;
-        console.log(urlGenerated);
         shareTwitter.classList.remove('hidden');
         createTweet(urlGenerated);
     })

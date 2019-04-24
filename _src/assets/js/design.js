@@ -1,32 +1,3 @@
-
-
-// function changeColor() {
-//     previewCard.classList.add('preview-red');
-//     previewCard.classList.remove('preview-grey', 'preview-default');
-// }
-
-
-// radioRed.addEventListener('click', changeColor);
-
-// // grey
-
-// const radioGrey = document.querySelector('#grey_palette');
-
-
-
-
-// radioGrey.addEventListener('click', changeColor2);
-
-// //default
-
-// const radioDefault = document.querySelector('#blue_palette');
-
-
-// function changeColor3() {
-//     previewCard.classList.remove('preview-red', 'preview-grey');
-//     previewCard.classList.add('preview-default');
-// }
-
 'use strict';
 
 const radioBlue = document.querySelector('#blue_palette');
@@ -56,12 +27,9 @@ function choosePalette(value){
 const getPalette = event => {
     const name = event.currentTarget.name;
     const value = parseInt(event.currentTarget.value);
-    console.log(name, value);
     choosePalette(value);
     saveData(name, value);
 };
-
-// function checkRadio(value) {}
 
 radioBlue.addEventListener('click', getPalette);
 radioRed.addEventListener('click', getPalette);

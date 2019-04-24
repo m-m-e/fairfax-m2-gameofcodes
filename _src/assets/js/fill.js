@@ -42,17 +42,13 @@ const card = {
     palette: 1
 };
 
-//Coger los datos guardados (si hay)
 const savedData = JSON.parse(localStorage.getItem('cardSaved'));
 
-
-//merge savedData con card
 const cardData = {
     ...card,
     ...savedData
 };
 
-//imprimir cosas por defecto O guardado
 const setCardData = (data) => {
     if (data.name === 'Nombre Apellido') {
         namePreview.innerHTML = data.name;
@@ -80,7 +76,6 @@ const setCardData = (data) => {
     choosePalette(cardData.palette);
     imageDefault.style = `background-image: url(${cardData.photo})`;
     imgPreviewDefault.style = `background-image: url(${cardData.photo})`;
-    console.log(data);
 };
 
 setCardData(cardData);
@@ -109,6 +104,7 @@ function fillJob() {
 }
 
 jobInput.addEventListener('keyup', fillJob);
+
 // iconos
 // MAIL
 
@@ -203,11 +199,9 @@ function resetCard (event) {
 
 reset.addEventListener('click', resetCard);
 
-//Save data
 
 function saveData(key, val) {
     cardData[key] = val;
-    // console.log(cardData);
     localStorage.setItem('cardSaved', JSON.stringify(cardData));
     return cardData;
 }
