@@ -21,7 +21,9 @@ function sendHandler(event) {
         cardUrl.href = urlGenerated;
         console.log(urlGenerated);
         shareTwitter.classList.remove('hidden');
+        sendTweet(urlGenerated);
     })
 }
+
 
 btnShare.addEventListener('click', sendHandler);
