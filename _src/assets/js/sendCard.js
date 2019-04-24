@@ -1,33 +1,30 @@
 'use strict';
 
 const btnShare = document.querySelector('.share__btn--create');
-const nuestroObjeto = {
-    palette: 1,
-    name: 'Maria',
-    job: 'frontend',
-    phone: '66666666',
-    email: 'maria@gmail.com',
-    linkedin: 'mariagar',
-    github: 'mariagar',
-    photo: base64
-}
+const cardUrl = document.querySelector('.share__link--cards');
+const shareTwitter = document.querySelector('.share__info--wrapper');
 
-function sendHandler() {
-    console.log('holi'); 
+function sendHandler(event) {
+    event.preventDefault();
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
         method: 'POST',
         headers: {
             "content-Type": "application/json",
         },
-        body: JSON.stringify(nuestroObjeto),
+        body: JSON.stringify(cardData),
     })
+    
     .then(response => response.json())
     .then(data => {
         const urlGenerated = data.cardURL;
-        console.log(urlGenerated);
+        cardUrl.innerHTML = urlGenerated;
+        cardUrl.href = urlGenerated;
+        shareTwitter.classList.remove('hidden');
+        createTweet(urlGenerated);
+        
     })
+    console.log(cardData);
 }
 
-//sendCard();
 
 btnShare.addEventListener('click', sendHandler);

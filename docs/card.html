@@ -25,7 +25,8 @@
         </header>
         <main class="main__card">
             <div class="wrapper main__card-wrapper">
-                <form action="#" method="post" class="card__section1">
+                <form action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/"
+                method="post" class="card__section1">
                     <fieldset class="design js-container">
                         <legend class="hide">Sección de diseña</legend>
                         <div class="design__container__title js-container-title">
@@ -91,17 +92,17 @@
                             <div class="form__container-name">
                                 <label class="form_title" for="name">Nombre completo</label>
                                 <input class="form_field" type="text" name="name"
-                                id="name" placeholder="Ej: Sally Jill">
+                                id="name" placeholder="Ej: Sally Jill" required>
                             </div>
                             <div class="form__container-job">
                                 <label class="form_title" for="job">Puesto</label>
                                 <input class="form_field" type="text" name="job" id="job"
-                                placeholder="Ej: Front-end unicorn">
+                                placeholder="Ej: Front-end unicorn" required>
                             </div>
                             <div class="form__container-photo">
                                 <label class="form_title-photo" for="photo">Imagen de perfil</label>
                                 <input class="form_field-photo js__profile-upload-btn"
-                                type="file" name="photo" id="photo">
+                                type="file" name="photo" id="photo" required>
                                 <div class="form__container-btn">
                                     <button type="button" class="form__btn js__profile-trigger">Añadir imagen</button>
                                     <div class="form__photo-preview js__profile-preview"></div>
@@ -110,7 +111,7 @@
                             <div class="form__container-email">
                                 <label class="form_title" for="email">Email</label>
                                 <input class="form_field" type="email" name="email" id="email"
-                                placeholder="Ej: sally-hill@gmail.com">
+                                placeholder="Ej: sally-hill@gmail.com" required>
                             </div>
                             <div class="form__container-phone">
                                 <label class="form_title" for="phone">Teléfono</label>
@@ -120,12 +121,12 @@
                             <div class="form__container-linkedin">
                                 <label class="form_title" for="linkedin">Linkedin</label>
                                 <input class="form_field" type="text" name="linkedin"
-                                id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
+                                id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
                             </div>
                             <div class="form__container-github">
                                 <label class="form_title" for="github">Github</label>
                                 <input class="form_field" type="text" name="github" id="github"
-                                placeholder="Ej: sally-hill">
+                                placeholder="Ej: sally-hill" required>
                             </div>
                         </div>
                     </fieldset>
@@ -142,8 +143,8 @@
                                 <button type="submit" class="share__btn--create"><i class="far fa-address-card"></i>Crear tarjeta</button>
                             </div>
                         </div>
-                        <div class="share__info--wrapper">
-                            <p class="share__paragraph">La tarjeta ha sido creada:</p> <a class="share__link--cards link" href="">https://awesome-profile-card.com?id=A456DF0001</a>
+                        <div class="share__info--wrapper hidden">
+                            <p class="share__paragraph">La tarjeta ha sido creada:</p> <a class="share__link--cards link" href=""></a>
 
                             <a
                             href="" class="share__btn--twitter link"><i class="fab fa-twitter"></i>Compartir en twitter</a>

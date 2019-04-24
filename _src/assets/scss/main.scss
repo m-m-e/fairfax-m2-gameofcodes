@@ -56,7 +56,6 @@ fieldset {
 }
 
 .main__card {
-  background: linear-gradient(to bottom, #bfcdd0 0%, #dde9ed 28%, $color-light-grey 28%, $color-white 100%);
   @media all and (min-width: 768px) {
     background: linear-gradient(to bottom, $color-light-grey, $color-white);
   }
