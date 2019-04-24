@@ -25,7 +25,3 @@ function collapsable (e) {
 for (const item of containerTitle) {
     item.addEventListener('click', collapsable);
 }
-
-
-
-
