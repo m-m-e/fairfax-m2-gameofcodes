@@ -10,7 +10,3 @@ function createTweet(url) {
   twitterLinkBtn.href = tweet;
   console.log(twitterLinkBtn.href);
 }
-
-// function sendTweet() {
-  
-// }
