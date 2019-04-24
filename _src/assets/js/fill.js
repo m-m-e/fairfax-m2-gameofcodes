@@ -24,6 +24,13 @@ const inputGithub = document.querySelector('#github');
 const githubIcon = document.querySelector('.sm-link-github');
 const valueGithub = inputGithub.value;
 
+const reset = document.querySelector('.preview__reset');
+const field = document.querySelectorAll('.form_field');
+const imageDefault = document.querySelector('.preview__card--image');
+const iconsDefault = document.querySelectorAll('.sm');
+const imgPreviewDefault = document.querySelector('.form__photo-preview');
+
+
 const card = {
     name: 'Nombre Apellido',
     job: 'Front-end developer',
@@ -31,10 +38,9 @@ const card = {
     phone: '',
     linkedin: '',
     github: '',
-    photo: 'https://placehold.it/240x200',
+    photo: base64,
     palette: 1
 };
-//imageDefault.setAttribute('style',`background-image:url(${base64})`);
 
 //Coger los datos guardados (si hay)
 const savedData = JSON.parse(localStorage.getItem('cardSaved'));
@@ -72,7 +78,7 @@ const setCardData = (data) => {
     inputGithub.value = data.github;
     showGithub();
     choosePalette(cardData.palette);
-
+    imageDefault.style = `background-image: url(${cardData.photo})`;
     console.log(data);
 };
 
@@ -168,11 +174,6 @@ function showGithub() {
 inputGithub.addEventListener('keyup', showGithub);
 
 //RESET
-const reset = document.querySelector('.preview__reset');
-const field = document.querySelectorAll('.form_field');
-const imageDefault = document.querySelector('.preview__card--image');
-const iconsDefault = document.querySelectorAll('.sm');
-const imgPreviewDefault = document.querySelector('.form__photo-preview');
 
 function hideIcons () {
     for (const icon of iconsDefault) {
@@ -181,7 +182,7 @@ function hideIcons () {
 }
 
 function backImage () {
-    imageDefault.style = `background-image: url(${base64})`;
+    imageDefault.style.backgroundImage = `url(${card.photo})`;
 }
 
 function resetCard (event) {
@@ -205,7 +206,7 @@ reset.addEventListener('click', resetCard);
 
 function saveData(key, val) {
     cardData[key] = val;
-    console.log(cardData);
+    // console.log(cardData);
     localStorage.setItem('cardSaved', JSON.stringify(cardData));
     return cardData;
 }
