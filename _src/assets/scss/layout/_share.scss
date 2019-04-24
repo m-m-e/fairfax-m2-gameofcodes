@@ -1,4 +1,7 @@
 
+.share__section{
+  border-bottom: 1px solid lightgrey;
+}
 
 .link {
   text-decoration: none;
@@ -38,6 +41,7 @@
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.2s;
+ 
 }
 .arrow-wrapper {
   display: flex;

@@ -27,6 +27,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  
 }
 
 .design__container__title1 {
@@ -61,6 +62,8 @@
 
 .design {
   font-family: $font-default;
+  border-bottom: 1px solid lightgrey;
+  
 }
 
 .fa-chevron-up {

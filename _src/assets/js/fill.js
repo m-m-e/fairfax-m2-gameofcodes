@@ -10,6 +10,8 @@ const card = {
     image: 'https://placehold.it/240x200'
 };
 
+//imageDefault.setAttribute('style',`background-image:url(${base64})`);
+
 //nombre y puesto
 
 const nameInput = document.querySelector('#name');
@@ -124,11 +126,16 @@ const reset = document.querySelector('.preview__reset');
 const field = document.querySelectorAll('.form_field');
 const imageDefault = document.querySelector('.preview__card--image');
 const iconsDefault = document.querySelectorAll('.sm');
+const imgPreviewDefault = document.querySelector('.form__photo-preview');
 
 function hideIcons () {
     for (const icon of iconsDefault) {
     icon.classList.add('hidden');
     }
+}
+
+function backImage () {
+    imageDefault.style = `background-image: url(${base64})`;
 }
 
 function resetCard (event) {
@@ -140,6 +147,8 @@ function resetCard (event) {
     fillName();
     fillJob(); 
     changeColors('preview-blue');
+    backImage();
+    profilePreview.style.backgroundImage = '';
 }
 
 reset.addEventListener('click', resetCard);
