@@ -10,7 +10,6 @@ const hidden = () => {
 
 const collapsable = (e) => {
   const parent = e.currentTarget.parentElement;
-
   if (parent.classList.contains('js-container-hidden') === true) {
     hidden();
     parent.classList.remove('js-container-hidden');

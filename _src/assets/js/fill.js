@@ -37,7 +37,7 @@ const card = {
   phone: '',
   linkedin: '',
   github: '',
-  photo: base64,
+  photo: defaultImg,
   palette: 1
 };
 
