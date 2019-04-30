@@ -6,10 +6,11 @@ const radioGrey = document.querySelector('#grey_palette');
 
 const previewCard = document.querySelector('.preview__card');
 
-function changeColors(classtoadd) {
+const changeColors = (classtoadd) => {
   previewCard.classList.remove('preview-grey', 'preview-red', 'preview-blue');
   previewCard.classList.add(classtoadd);
-}
+};
+
 
 const choosePalette = value => {
   if (value === 1) {
