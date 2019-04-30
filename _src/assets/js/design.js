@@ -11,7 +11,7 @@ function changeColors(classtoadd) {
   previewCard.classList.add(classtoadd);
 }
 
-function choosePalette(value) {
+const choosePalette = value => {
   if (value === 1) {
     changeColors('preview-blue');
     radioBlue.checked = 'checked';
@@ -22,7 +22,7 @@ function choosePalette(value) {
     changeColors('preview-grey');
     radioGrey.checked = 'checked';
   }
-}
+};
 
 const getPalette = event => {
   const name = event.currentTarget.name;
