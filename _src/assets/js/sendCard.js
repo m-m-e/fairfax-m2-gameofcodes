@@ -4,14 +4,17 @@ const btnShare = document.querySelector('.share__btn--create');
 const cardUrl = document.querySelector('.share__link--cards');
 const shareTwitter = document.querySelector('.share__info--wrapper');
 
-function sendHandler(event) {
+
+const sendHandler = (event) => {
+
   event.preventDefault();
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     headers: {
-      "content-Type": "application/json",
+
+      'content-Type': 'application/json'
     },
-    body: JSON.stringify(cardData),
+    body: JSON.stringify(cardData)
   })
 
     .then(response => response.json())
@@ -22,9 +25,10 @@ function sendHandler(event) {
       shareTwitter.classList.remove('hidden');
       createTweet(urlGenerated);
 
-    })
+    });
   console.log(cardData);
-}
+};
+
 
 
 btnShare.addEventListener('click', sendHandler);
